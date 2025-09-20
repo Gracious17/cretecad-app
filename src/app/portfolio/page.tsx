@@ -8,7 +8,7 @@ const page = () => {
         bgImage="/hero-bg.jpg"
           highlightedText="Our Company"
           titleImage="/africa.png"
-          titleParts=" Future Through Innovation"
+          titleParts="Our Impact"
           subtitle="Redefining Africa's Business Industry, One Step at a Time"
       
       />

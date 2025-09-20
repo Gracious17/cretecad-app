@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import SearchButtonIcon from "./icons/SearchButtonIcon";
 import LightbulbIcon from "./icons/LightbulbIcon";
 import TechShapeIcon from "./icons/TechShapeIcon";
 import InnovationCards from "./ui/InnovationCards";
@@ -9,17 +8,17 @@ import { Button } from "./ui/Button";
 import { SearchIcon } from "lucide-react";
 
 type HeroSectionProps = {
-  bgImage: string; 
+  bgImage: string;
   title?: string;
-  titleParts?: string; 
-  highlightedText?: string; 
-  titleImage?: string; 
-  titleImageClassName?: string; 
-  subtitle?: string; 
-  children?: React.ReactNode; 
-  className?: string; 
-  showIcons?: boolean; 
-  showSearchBar?: boolean; 
+  titleParts?: string;
+  highlightedText?: string;
+  titleImage?: string;
+  titleImageClassName?: string;
+  subtitle?: string;
+  children?: React.ReactNode;
+  className?: string;
+  showIcons?: boolean;
+  showSearchBar?: boolean;
 };
 const HeroSection = ({
   bgImage,
@@ -36,7 +35,7 @@ const HeroSection = ({
 }: HeroSectionProps) => {
   return (
     <section
-      className={`relative min-h-screen w-full pt-20  overflow-hidden ${
+      className={` min-h-screen w-full pt-20  overflow-hidden ${
         className || ""
       }`}
       style={{ backgroundImage: `url(${bgImage})`, backgroundSize: "cover" }}
@@ -48,30 +47,28 @@ const HeroSection = ({
           <div className="space-y-10 -mt-4">
             <div className="space-y-4">
               <h1 className="hero-heading text-(--text-primary)">
-                <div className="relatives flex ">
+                <div className="flex ">
                   <span className="  z-20 ">
-                    {/* Transforming */}
                     {highlightedText}
                   </span>
 
                   <span>
-                    <Image
-                      src={titleImage || ""}
-                      // "/africa.png"
-                      alt="Hero background shape"
-                      width={327}
-                      height={92}
-                      className={`absolute object-contain top-26 left-[405px] ${
-                        titleImageClassName || ""
-                      }`}
-                    />
+                    {titleImage && (
+                      <Image
+                        src={titleImage || ""}
+                        alt="Hero background shape"
+                        width={327}
+                        height={92}
+                        className={`absolute object-contain top-26 left-[405px] ${
+                          titleImageClassName || ""
+                        }`}
+                      />
+                    )}
                   </span>
                 </div>
-                {/* Future Through Innovation */}
                 {titleParts}
               </h1>
               <p className="text-xl text-(--text-secondary) max-w-lg">
-                {/* Redefining Africa's Business Industry, One Step at a Time */}
                 {subtitle}
               </p>
             </div>
@@ -80,8 +77,8 @@ const HeroSection = ({
             {showSearchBar && (
               <>
                 {/* Search Bar */}
-                <SearchBar>
-                  <Button className="px-[40px] gap-8 rounded-full">
+                <SearchBar placeholder="Search  solutions">
+                  <Button  className="px-[40px] py-8 gap-8 rounded-full">
                     <SearchIcon />
                   </Button>
                 </SearchBar>

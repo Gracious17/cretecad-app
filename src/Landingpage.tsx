@@ -21,9 +21,8 @@ const LandingPage: React.FC = () => {
         />
         <ProductsSection />
         <ValuesSection />
-        {/* <PhilosophySection /> */}
+        <PhilosophySection />
       </main>
-      {/* <Footer /> */}
     </div>
   );
 };

@@ -22,7 +22,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   onLearnMore,
 }) => {
   return (
-    <Card className=" w-[300px] h-[350px] flex-shrink-0 bg-white border-[1.5px] border-[#e3e8f280] rounded">
+    <Card className=" w-[300px] h-[350px] flex-shrink-0 bg-white border-[1.5px] border-[#e3e8f280] rounded hover:shadow-lg shadow-gray-500 z-20 transition-shadow">
       <CardContent className="p-0 h-full">
         <div className="relative w-full h-[200px] overflow-hidden">
           <div

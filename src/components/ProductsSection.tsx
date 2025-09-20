@@ -1,13 +1,8 @@
 "use client";
 import React from "react";
-import { Button } from "./ui/Button";
 import { ProductCard } from "./Card2";
-import ArrowLeftIcon from "./icons/ArrowLeftIcon";
-import ArrowRightIcon from "./icons/ArrowRightIcon";
 import { ProductCardProps } from "./Card2";
-import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 import { GradientSection } from "./GradientSection";
-import { Card, CardContent } from "./ui/card";
 const productData: ProductCardProps[] = [
   {
     title: "CRETESPACE",
@@ -70,24 +65,22 @@ const productData: ProductCardProps[] = [
 const ProductsSection: React.FC = () => {
   const handleLearnMore = (productTitle: string) => {
     console.log(`Learn more clicked for ${productTitle}`);
-    // navigation logic here
   };
   
   const handleonNext = () => {
     console.log(`Learn more clicked for `);
-    // navigation logic here
   };
 
   const handleoPrev=() => {
     console.log(`Learn more clicked for`);
-    // navigation logic here
+    
   };
 
   return (
     
     <div className="flex items-center gap-6 ">
 
-<GradientSection title="Our Products" 
+<GradientSection title="Our Products" className="z-0"
 onNext={handleonNext}
 onPrev={handleoPrev}
 
@@ -102,40 +95,8 @@ scrollable={true}>
 ))}
 </GradientSection>
           </div>
-//        <ScrollArea className="w-[1440px] ">
-
-//       {productData.map((product, index) => (
-//           <ProductCard
-//             key={product.title}
-//            {...product}
-//           onLearnMore={() => handleLearnMore(product.title)}
-//       />
-//      ))}
-
-
-// <ScrollBar orientation="horizontal" />
-//         </ScrollArea>
-
-    //     <header className="flex w-[1278px] items-start absolute top-[841px] left-[431px] flex-col gap-2.5">
-    //       <div className="w-[60px] h-[7px] bg-primarydarkblue" />
-    //       <h2 className="w-[585px] font-header-h1-large-40px-bold font-[number:var(--header-h1-large-40px-bold-font-weight)] text-primarydarkblue text-[length:var(--header-h1-large-40px-bold-font-size)] tracking-[var(--header-h1-large-40px-bold-letter-spacing)] leading-[var(--header-h1-large-40px-bold-line-height)] [font-style:var(--header-h1-large-40px-bold-font-style)]">
-    //         Our Products
-    //       </h2>
-
-    //      <button className="w-12 h-12 rounded-full border border-(--border-light) flex items-center justify-center hover:bg-(--background-light) transition-colors">
-    //           <ArrowLeftIcon width={19} height={14} color="#7e8491" />
-    //         </button>
-
-    //        <button className="w-12 h-12 rounded-full border border-(--border-light) flex items-center justify-center hover:bg-(--background-light) transition-colors">
-    //           <ArrowRightIcon width={18} height={14} color="#7e8491" />
-    //         </button>
-    //     </header> 
-    //   </div>
-    // </section>
-
 );
 };
 
 export default ProductsSection;
-{/* <ScrollArea className="w-[1440px]  ">
-        </ScrollArea>  */}
+

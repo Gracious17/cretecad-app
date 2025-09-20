@@ -1,5 +1,5 @@
+import React from 'react'
 import LandingPage from '@/Landingpage'
-import React, { Fragment } from 'react'
 
 const page = () => {
   return (

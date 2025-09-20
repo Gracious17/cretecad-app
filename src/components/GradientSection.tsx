@@ -21,8 +21,7 @@ export const GradientSection: React.FC<GradientSectionProps> = ({
 }) => {
   return (
     <section
-      className={`relative w-full h-[771px] overflow-hidden  ${className}`}
-    >
+      className={`relative w-full h-[771px] overflow-hidden  ${className ?? ""}`}>
       {/* Background shapes */}
       <div className="relative w-[2179px] h-[2280px] -top-[751px] -left-[349px]">
         <div className="absolute w-[1055px] h-[1040px] top-0 left-0 bg-primaryyellow2 rounded-[527.5px/520px] opacity-20" />
@@ -33,7 +32,6 @@ export const GradientSection: React.FC<GradientSectionProps> = ({
           <div className="flex flex-row items-start gap-2.5">
             <div className="flex items-center justify-between w-full">
                 <SectionHeader text={title} lineColor="#000D35"/>
-            <div className="w-[60px] h-[7px] bg-primary-dark" />
 
 <div className="flex items-center gap-4 mr-4">
                 {onPrev && (
@@ -57,7 +55,7 @@ export const GradientSection: React.FC<GradientSectionProps> = ({
           {children && (
             <div className="mt-6">
               {scrollable ? (
-                <div className="overflow-x-auto scrollbar-hide">
+                <div className="overflow-x-auto hide-scrollbar">
                   <div className="flex gap-4">
                     {children}
                   </div>

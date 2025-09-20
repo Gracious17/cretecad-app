@@ -1,6 +1,7 @@
 import React from "react";
 import SectionHeader from "./sections/SectionHeader";
 import { Quote } from "lucide-react";
+import { Card } from "./ui/card";
 
 const PhilosophySection: React.FC = () => {
   const philosophyCards = [
@@ -25,8 +26,8 @@ const PhilosophySection: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-20 gray-gradient-section! w-full">
+      <div className="max-w-7xl mx-auto px-6 ">
         {/* Section Header */}
         <div className="mb-12">
           {/* header here  */}
@@ -36,29 +37,27 @@ const PhilosophySection: React.FC = () => {
         {/* Philosophy Cards */}
         <div className="grid md:grid-cols-3 gap-8">
           {philosophyCards.map((card, index) => (
-            <div
+            <Card
               key={index}
-              className="bg-(--background-light) rounded-lg p-8 space-y-4"
+              className="bg-[#FFFFFF] border-none rounded-lg space-y-4 px-4 group"
             >
-              <div className="flex items-start gap-4">
                 <div className="flex-1 space-y-3">
-                  <h3 className="subsection-heading text-(--text-secondary) leading-9">
-                    <Quote className=" text-(--border-light)  " />
+                  <h3 className="subsection-heading text-(--text-secondary) font-[700] leading-9 group-hover:text-gray-600">
+                    <Quote size={30} className="inline text-(--border-light)  rotate-180 " />
 
                     {card.quote}
-                    <Quote className="  text-(--border-light)" />
+                    <Quote size={30} className=" inline text-(--border-light)" />
                   </h3>
-                  <div className="space-y-2">
-                    <p className="body-text text-(--text-secondary)">
+                  <div className="space-y-2 px-4  ">
+                    <p className=" body-text text-(--text-secondary) group-hover:text-gray-600">
                       {card.content}
                     </p>
-                    <button className="text-sm text-(--text-primary) underline hover:no-underline transition-all">
+                    <button className="float-end cursor-pointer text-sm text-(--text-primary) underline hover:no-underline transition-all">
                       {card.link}
                     </button>
                   </div>
                 </div>
-              </div>
-            </div>
+              </Card>
           ))}
         </div>
       </div>
