@@ -1,5 +1,4 @@
-import React, { Fragment } from "react";
-import { WhyPartnerWithUsSection } from "../partnership-sections/WhyPartner";
+import React from "react";
 import { WhyCard } from "../shared/WhyCard";
 const featuresItem = [
   {
@@ -9,25 +8,25 @@ const featuresItem = [
       "Tailored solutions that understand Africa’s unique challenges.",
   },
   {
-    icon: "icon-1.svg",
+    icon: "/iconCard.svg",
     title: "Fast deployment",
     description:
       "Tailored solutions that understand Africa’s unique challenges.",
   },
   {
-    icon: "icon-1.svg",
+    icon: "/iconCard.svg",
     title: "Affordable pricing",
     description:
       "Tailored solutions that understand Africa’s unique challenges.",
   },
   {
-    icon: "icon-1.svg",
+    icon: "/iconCard.svg",
     title: "Scalable and secure solutions",
     description:
       "Tailored solutions that understand Africa’s unique challenges.",
   },
   {
-    icon: "icon-1.svg",
+    icon: "/iconCard.svg",
     title: "Integrated with CRETECAD ecosystem",
     description:
       "Tailored solutions that understand Africa’s unique challenges.",

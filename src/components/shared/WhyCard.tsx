@@ -40,7 +40,7 @@ export const WhyCard = ({
   const cardClass = clsx(
     "w-[250px] bg-white shadow-[-12px_24px_40px_#ababab40] border-0",
     {
-      "even:mb-4 rounded-[24px_4px_24px_24px]": variant === "default",
+      "even:mb-8 rounded-[24px_4px_24px_24px]": variant === "default",
       "rounded-md ": variant === "compact",
     },
     cardClassName

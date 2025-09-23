@@ -1,9 +1,8 @@
-
-
+import { cn } from "@/lib/utils";
 import React from "react";
 
 type Props = {
-  text?: string;
+  text?: string | React.ReactNode;
   className?: string;
   lineColor?: string;
   variant?: "default" | "centered";
@@ -12,13 +11,14 @@ type Props = {
   headerLevel?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   textClassName?: string;
   containerPadding?: string;
-  subtitle?:string;
-  showLine?:boolean;
+  subtitle?: string | React.ReactNode ;
+  subtitleClassName?:string;
+  showLine?: boolean;
 };
 
-const SectionHeader = ({ 
-  text, 
-  className, 
+const SectionHeader = ({
+  text,
+  className,
   lineColor = "#FFA1F2",
   variant = "default",
   lineWidth,
@@ -27,9 +27,9 @@ const SectionHeader = ({
   textClassName,
   containerPadding,
   subtitle,
-  showLine=true
+  subtitleClassName,
+  showLine = true,
 }: Props) => {
-  
   //  styles based on variant
   const getVariantStyles = () => {
     switch (variant) {
@@ -38,7 +38,7 @@ const SectionHeader = ({
           container: "flex flex-col items-center gap-2.5 relative w-full",
           line: "w-[60px] h-[7px]",
           text: "section-heading text-primary-dark text-center",
-          padding: "px-[210px] py-0"
+          padding: "px-[210px] py-0",
         };
       case "default":
       default:
@@ -46,36 +46,35 @@ const SectionHeader = ({
           container: "flex flex-col items-start gap-4 mb-4",
           line: "w-15 h-2",
           text: "section-heading text-(--text-primary)",
-          padding: ""
+          padding: "",
         };
     }
   };
 
   const styles = getVariantStyles();
-  
+
   const HeaderElement = headerLevel;
-  
+
   return (
-    <div className={`${styles.container} ${containerPadding || styles.padding} ${className ?? ""}`}>
-      {showLine &&(
-
-
-      <div 
-        className={lineWidth && lineHeight ? `${lineWidth} ${lineHeight}` : styles.line} 
-        style={{ backgroundColor: lineColor }} 
-      />
+    <div
+      className={`${styles.container} ${containerPadding || styles.padding} ${
+        className ?? ""
+      }`}
+    >
+      {showLine && (
+        <div
+          className={
+            lineWidth && lineHeight ? `${lineWidth} ${lineHeight}` : styles.line
+          }
+          style={{ backgroundColor: lineColor }}
+        />
       )}
       <HeaderElement className={textClassName || styles.text}>
         {text}
       </HeaderElement>
-{subtitle &&(
-  <p className="body-text text-[24px]">
-{subtitle}
-  </p>
-)
-
-}
-
+      {subtitle && (
+        <p className={cn("body-text text-[24px]", subtitleClassName)}>{subtitle}</p>
+      )}
     </div>
   );
 };

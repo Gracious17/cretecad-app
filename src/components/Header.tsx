@@ -1,10 +1,15 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { Button } from "./ui/Button";
 import SearchIcon from "./icons/SearchIcon";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import HighlightPill from "./ui/HighlightPill";
 
 const Header: React.FC = () => {
+  const pathname = usePathname(); 
+
   const navItems = [
     {
       name: "Solutions",
@@ -24,34 +29,40 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/">
-          <div className="flex items-center">
-            <Image
-              src="/assets/cretecad-logo.svg"
-              alt="Cretecad Logo"
-              width={47}
-              height={56}
-              className="h-14 w-auto"
+            <div className="flex items-center">
+              <Image
+                src="/assets/cretecad-logo.svg"
+                alt="Cretecad Logo"
+                width={47}
+                height={56}
+                className="h-14 w-auto"
               />
-          </div>
-
-              </Link>
-          {/* Navigation */}
+            </div>
+          </Link>
           <nav className="hidden lg:flex items-center gap-6 ">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="body-text text-(--text-primary) hover:text-(--primary-blue)  hover:pb-2 transition-all duration-500 "
-              >
-                {item.name}
-              </a>
-            ))}
+            {navItems.map((item) => {
+              const isActive = pathname === item.href;
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`relative body-text text-(--text-primary) hover:text-(--primary-blue)    transition-all duration-500 ${
+                    isActive ? "":"hover:pb-4"
+                  }`}
+                >
+                  {item.name}
+                  { isActive&&(
+                    <HighlightPill/>
+                  )}
+                </Link>
+              );
+            })}
+
             <SearchIcon width={13} height={13} color="#7e8491" />
           </nav>
 
-          {/* CTA Button */}
           <Button variant="primary" size="md">
-            <span >Get Started</span>
+            <span>Get Started</span>
           </Button>
         </div>
       </div>

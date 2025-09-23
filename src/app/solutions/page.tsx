@@ -10,7 +10,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div>
+    <>
       <HeroSection
         className=" "
         bgImage="/hero-bg.jpg"
@@ -68,7 +68,7 @@ Get Started Today
         </Button>
 </div>
       </div>
-    </div>
+    </>
   );
 };
 

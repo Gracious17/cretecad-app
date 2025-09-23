@@ -23,7 +23,7 @@ const SectionBlock = ({
   className,
 }: SectionBlockProps) => {
   const highlightClasses = `${highlightColor} ${
-    underline ? "underline decoration-2" : ""
+    underline ? "underline decoration-2" : "font-semibold"
   }`;
   const lines = text.split("\n");
 

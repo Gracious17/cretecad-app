@@ -129,8 +129,8 @@
 
 @utility subsection-heading {
   font-family: "Segoe UI", system-ui, sans-serif;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 700;
   line-height: 150%;
 }
 
@@ -199,6 +199,7 @@
     #000d35 100%
   );
 }
+
 .bg-primaryyellow2 {
   background-color: var(--primaryyellow2);
 }

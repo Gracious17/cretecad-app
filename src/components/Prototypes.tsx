@@ -39,7 +39,7 @@ const Prototypes = () => {
 
   return (
     <>
-      <div className="w-full items-start pl-10 pr-4">
+      <div className="w-full items-start pl-10 pr-4 ">
         <h2 className=" -mt-15  text font-[700] text-[32px] text-[#FFFFFF]">
           Prototypes for Sale
         </h2>

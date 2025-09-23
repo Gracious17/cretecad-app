@@ -6,8 +6,8 @@ export const partnershipSections: PartnershipSectionData[] = [
     theme: "business",
     buttonText: "Apply as a Business Partner",
     imagePosition: "right",
-    imageSrc:
-      "/business-objects-with-executives-discussing-blueprint-meeting-1.png",
+    imageSrc:"https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800",
+      // "/business-objects-with-executives-discussing-blueprint-meeting-1.png",
     imageAlt: "Business objects",
     partnerships: [
       {
