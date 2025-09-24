@@ -3,7 +3,6 @@ import HeroSection from "./components/HeroSection";
 import ProductsSection from "./components/ProductsSection";
 import ValuesSection from "./components/ValuesSection";
 import PhilosophySection from "./components/PhilosophySection";
-import Footer from "./components/Footer";
 
 
 const LandingPage: React.FC = () => {

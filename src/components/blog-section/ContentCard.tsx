@@ -12,7 +12,7 @@ export const ContentCard: React.FC<ContentCardProps> = ({ content }) => {
     switch (content.type) {
       case 'insight':
         return content.readTime && (
-          <span className="text-xs text-neutral-2">• {content.readTime}</span>
+          <span className="text-xs ">• {content.readTime}</span>
         );
       case 'media':
         return (
@@ -22,7 +22,7 @@ export const ContentCard: React.FC<ContentCardProps> = ({ content }) => {
         );
       case 'research':
         return (
-          <span className="text-xs text-neutral-2">
+          <span className="text-xs">
             • {new Date(content.publishDate).toLocaleDateString()} • {content.authors.join(', ')}
           </span>
         );
@@ -34,7 +34,7 @@ export const ContentCard: React.FC<ContentCardProps> = ({ content }) => {
         );
       case 'community':
         return (
-          <span className="text-xs text-neutral-2">
+          <span className="text-xs">
             • {content.eventDate && new Date(content.eventDate).toLocaleDateString()} • {content.location} • {content.eventType}
           </span>
         );
@@ -63,6 +63,7 @@ export const ContentCard: React.FC<ContentCardProps> = ({ content }) => {
       <div className="relative w-full h-56 rounded-lg overflow-hidden">
         <img
           className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover ${content.imageClasses}`}
+          loading="lazy"
           alt={content.title}
           src={content.image}
         />
@@ -70,28 +71,27 @@ export const ContentCard: React.FC<ContentCardProps> = ({ content }) => {
 
       <CardContent className="flex flex-col w-full max-h-[185px] h-[185px] gap-1 p-0 py-1">
         <div className="flex flex-col items-center justify-center w-full">
-          <div className="w-full font-caption-12px-regular font-[number:var(--caption-12px-regular-font-weight)] text-primaryblue text-[length:var(--caption-12px-regular-font-size)] tracking-[var(--caption-12px-regular-letter-spacing)] leading-[var(--caption-12px-regular-line-height)] [font-style:var(--caption-12px-regular-font-style)]">
+          <div className="w-full  text-primaryblue  ">
             {content.category}
             {renderMetadata()}
           </div>
 
-          <h3 className="w-full font-header-h3-small-20px-semibold font-[number:var(--header-h3-small-20px-semibold-font-weight)] text-primarydarkblue text-[length:var(--header-h3-small-20px-semibold-font-size)] tracking-[var(--header-h3-small-20px-semibold-letter-spacing)] leading-[var(--header-h3-small-20px-semibold-line-height)] [font-style:var(--header-h3-small-20px-semibold-font-style)]">
+          <h3 className="w-full  text-primarydarkblue  ">
             {content.title}
           </h3>
         </div>
 
         <div className="flex flex-col items-start gap-2.5 relative flex-1 w-full grow overflow-hidden">
-          <p className="w-full font-body-16px-regular font-[number:var(--body-16px-regular-font-weight)] text-neutral-1 text-[length:var(--body-16px-regular-font-size)] tracking-[var(--body-16px-regular-letter-spacing)] leading-[var(--body-16px-regular-line-height)] [font-style:var(--body-16px-regular-font-style)]">
+          <p className="w-full ">
             {content.description}
           </p>
 
-          <div className="absolute left-0 bottom-0 w-[332px] h-[30px] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(255,255,255,1)_100%)]" />
+          <div className="absolute left-0 bottom-0 w-[332px] h-[40px] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(255,255,255,1)_100%)]" />
         </div>
 
         <div className="flex items-center justify-end gap-2.5 px-4 py-0 w-full">
           <Button
-            // variant="link"
-            className="h-auto p-0 [font-family:'Segoe_UI-Regular',Helvetica] font-normal text-neutral-1 text-[13px] tracking-[0] leading-[13px]"
+            className="h-auto p-0 [font-family:'Segoe_UI-Regular',Helvetica] font-normal  text-[13px] tracking-[0] leading-[13px]"
           >
             <span className="text-[#7d8490] leading-[19.5px] underline">
               {getActionText()}

@@ -11,7 +11,7 @@ export const tabSections: TabSection[] = [
         title: 'AI in Africa\'s Business Evolution',
         category: 'CRETECAD Whitepaper',
         description: 'AI is reshaping Africa\'s business landscape, driving smarter decisions and unlocking new opportunities across industries. From financial services to agriculture, it accelerates growth, efficiency, and innovation.',
-        image: '/966d161c6c6b33732e610738d5cf452a-1-1.png',
+        image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
         imageClasses: 'w-[352px] h-[255px]',
         readTime: '8 min read'
       },
@@ -21,7 +21,7 @@ export const tabSections: TabSection[] = [
         title: 'How CRETESPACE is Redefining the Business Centre',
         category: 'BLUMBERG',
         description: 'Discover how modern business centers are evolving to meet the needs of today\'s entrepreneurs and remote workers through innovative technology and flexible solutions.',
-        image: '/de5eaf740b8b64661130b9352c9f7fef-1-1.png',
+        image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
         imageClasses: 'w-[401px] h-[225px]',
         readTime: '12 min read'
       },
@@ -31,7 +31,7 @@ export const tabSections: TabSection[] = [
         title: 'The Future of Digital Learning: Inside CRETECADEMY',
         category: 'CRETECAD Whitepaper',
         description: 'Exploring the transformation of education through digital platforms and how CRETECADEMY is pioneering new approaches to skill development and professional growth.',
-        image: '/9697b1b6ff9906fb77686bc60830b814-1.png',
+        image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
         imageClasses: 'w-[369px] h-[277px]',
         readTime: '10 min read'
       }

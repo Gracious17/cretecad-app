@@ -1,7 +1,7 @@
 import React from "react";
 type Props = {
   className?: string;
-  icons?: React.ReactNode |any;
+  icons?: React.ReactNode;
   paragraph?: string;
 };
 const InnovationCards = ({ className, paragraph, icons }: Props) => {
