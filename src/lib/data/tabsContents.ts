@@ -83,7 +83,7 @@ export const tabSections: TabSection[] = [
         title: 'Future of Work: Remote Collaboration Tools',
         category: 'Webinar Series',
         description: 'Join our expert panel discussion on the latest remote collaboration tools and how they\'re shaping the future of work in the digital age.',
-        image: '/966d161c6c6b33732e610738d5cf452a-1-1.png',
+        image: 'https://unsplash.com/photos/newspaper-article-update-checking-publication-department-RHM8Iiu2EWw',
         imageClasses: 'w-[352px] h-[255px]',
         duration: '45 min',
         mediaType: 'webinar'
@@ -94,7 +94,7 @@ export const tabSections: TabSection[] = [
         title: 'AI Implementation Success Stories',
         category: 'Video Series',
         description: 'Watch real-world case studies of successful AI implementations across different industries and learn from their experiences.',
-        image: '/de5eaf740b8b64661130b9352c9f7fef-1-1.png',
+        image: 'https://unsplash.com/photos/newspaper-article-update-checking-publication-department-RHM8Iiu2EWw',
         imageClasses: 'w-[401px] h-[225px]',
         duration: '32 min',
         mediaType: 'video'
@@ -105,7 +105,7 @@ export const tabSections: TabSection[] = [
         title: 'Startup Funding Strategies Podcast',
         category: 'Podcast',
         description: 'Listen to successful entrepreneurs and investors share their insights on funding strategies, pitch preparation, and investor relations.',
-        image: '/9697b1b6ff9906fb77686bc60830b814-1.png',
+        image: 'https://unsplash.com/photos/newspaper-article-update-checking-publication-department-RHM8Iiu2EWw',
         imageClasses: 'w-[369px] h-[277px]',
         duration: '28 min',
         mediaType: 'podcast'

@@ -100,8 +100,8 @@ export const ContentCard: React.FC<ContentCardProps> = ({ content }) => {
           {content.type === "insight" ? (
             <span className="text-[#7d8490] underline text-[13px] leading-[19.5px] cursor-pointer">{getActionText()}</span>
           ) : (
-            <Button className="h-auto p-0 [font-family:'Segoe_UI-Regular',Helvetica] font-normal  text-[13px] tracking-[0] leading-[13px]">
-              <span className="text-[#7d8490] leading-[19.5px] underline">
+            <Button variant="primary" size="sm" className=" [font-family:'Segoe_UI-Regular',Helvetica] font-normal  text-[13px] tracking-[0] leading-[13px]">
+              <span className="font-bold leading-[19.5px] ">
                 {getActionText()}
               </span>
             </Button>

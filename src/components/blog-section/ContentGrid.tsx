@@ -12,7 +12,7 @@ export const ContentGrid: React.FC<ContentGridProps> = ({ content, title }) => {
     <section className="w-full py-[60px] ">
       <div className="max-w-[1440px] mx-auto px-20">
         <header className="mb-[42px]">
-          <h2 className=" text-primarydarkblue  ">
+          <h2 className=" subsection-heading ">
             {title}
           </h2>
         </header>
