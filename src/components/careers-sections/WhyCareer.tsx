@@ -44,7 +44,7 @@ const WhyCareer = () => {
         <WhyCard
           sectionClassName="px-8! bg-transparent!"
           containerClassName="gap-2! flex flex-row! "
-          cardClassName="glassmorphism! w-[250px] h-[250px] shadow-none "
+          cardClassName="glassmorphism! w-[250px] h-[250px] shadow-none rounded-lg! "
           pClassName="text-white "
           contentClassName="items-center"
           showButton={false}
