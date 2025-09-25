@@ -1,3 +1,4 @@
+import WhyCareer from "@/components/careers-sections/WhyCareer";
 import SectionBlock from "@/components/sections/SectionBlock";
 import SectionHeader from "@/components/sections/SectionHeader";
 import React from "react";
@@ -13,12 +14,20 @@ const page = () => {
            our innovation-driven  academy."
         />
       </div>
+      <div>
+
 <SectionHeader variant="centered"
 text="Career Tracks"
 />
 <SectionBlock variant="centered"
 text={`Choose your path: the Academy Track for fresh graduates starting their journey, or the \n Professional Track for experienced talents ready to advance their careers`}
 />
+</div>
+
+<div>
+  <WhyCareer/>
+</div>
+
     </>
   );
 };

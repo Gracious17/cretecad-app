@@ -6,7 +6,7 @@ import clsx from "clsx";
 
 type Feature = {
   icon: string;
-  title: string;
+  title?: string;
   description: string;
 };
 
@@ -75,7 +75,7 @@ export const WhyCard = ({
   return (
     <section
       className={clsx(
-        "flex flex-col w-full items-center gap-12 py-10 gray-gradient-section",
+        "flex flex-col w-full items-center gap-12 py-10 ",
         sectionClassName
       )}
     >
