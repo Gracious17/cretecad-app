@@ -47,7 +47,7 @@ export const tabSections: TabSection[] = [
         title: 'Digital Transformation Strategies for SMEs',
         category: 'Business Strategy',
         description: 'A comprehensive guide to implementing digital transformation in small and medium enterprises, covering technology adoption, change management, and ROI optimization.',
-        image: '/966d161c6c6b33732e610738d5cf452a-1-1.png',
+        image: 'https://plus.unsplash.com/premium_photo-1661962599491-7beb7c9456cc?q=80&w=884&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         imageClasses: 'w-[352px] h-[255px]',
         readTime: '15 min read'
       },
@@ -57,7 +57,7 @@ export const tabSections: TabSection[] = [
         title: 'Cloud Computing Best Practices',
         category: 'Technology',
         description: 'Essential practices for successful cloud migration and management, including security considerations, cost optimization, and performance monitoring.',
-        image: '/de5eaf740b8b64661130b9352c9f7fef-1-1.png',
+        image: 'https://plus.unsplash.com/premium_photo-1683135222192-d9c14544d187?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         imageClasses: 'w-[401px] h-[225px]',
         readTime: '12 min read'
       },
@@ -67,7 +67,7 @@ export const tabSections: TabSection[] = [
         title: 'Data Analytics for Business Growth',
         category: 'Analytics',
         description: 'Learn how to leverage data analytics to drive business decisions, improve customer experience, and identify new growth opportunities.',
-        image: '/9697b1b6ff9906fb77686bc60830b814-1.png',
+        image: 'https://plus.unsplash.com/premium_photo-1726750920964-c953324a3202?q=80&w=679&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         imageClasses: 'w-[369px] h-[277px]',
         readTime: '18 min read'
       }
