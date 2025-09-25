@@ -105,7 +105,7 @@ export const tabSections: TabSection[] = [
         title: 'Startup Funding Strategies Podcast',
         category: 'Podcast',
         description: 'Listen to successful entrepreneurs and investors share their insights on funding strategies, pitch preparation, and investor relations.',
-        image: 'https://unsplash.com/photos/newspaper-article-update-checking-publication-department-RHM8Iiu2EWw',
+        image: 'https://unsplash.com/photos/newspaper-article-update-checking-publication-department-RHM8Iiu2EWw/',
         imageClasses: 'w-[369px] h-[277px]',
         duration: '28 min',
         mediaType: 'podcast'

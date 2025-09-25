@@ -24,7 +24,7 @@
 //                 key={item.id}
 //                 value={item.id}
 //                 className={`
-//                   inline-flex flex-col h-20 items-start justify-center gap-1 pt-2.5 pb-0 px-4 
+//                   inline-flex flex-col h-20 items-start justify-center gap-1 pt-2.5 pb-0 px-4
 //                   flex-[0_0_auto] rounded-[100px] bg-transparent border-0 shadow-none
 //                   data-[state=active]:bg-transparent data-[state=active]:shadow-none
 //                   hover:bg-transparent
@@ -56,10 +56,8 @@
 //   );
 // };
 
-
-
-
-import React from "react";
+"use client";
+import React, { useMemo, useCallback } from "react";
 import { tabSections } from "../../lib/data/tabsContents";
 
 interface InsightsFilterSectionProps {
@@ -67,54 +65,57 @@ interface InsightsFilterSectionProps {
   onTabChange: (tab: string) => void;
 }
 
-export const InsightsFilterSection: React.FC<InsightsFilterSectionProps> = ({ 
-  activeTab, 
-  onTabChange 
-}) => {
-  const tabItems = tabSections.map(section => ({
-    id: section.id,
-    label: section.title
-  }));
+ const InsightsFilterSectionComponent: React.FC<InsightsFilterSectionProps> =({ activeTab, onTabChange }) => {
+    const tabItems = useMemo(
+      () =>
+        tabSections.map((section) => ({
+          id: section.id,
+          label: section.title,
+        })),
+      []
+    );
 
-  const handleTabClick = (tabId: string) => {
-    console.log('Tab clicked:', tabId);
-    onTabChange(tabId);
-  };
+    const handleTabClick = useCallback(
+      (tabId: string) => {
+        console.log("Tab clicked:", tabId);
+        onTabChange(tabId);
+      },
+      [onTabChange]
+    );
 
-  return (
-    <section className="flex w-full items-center px-20 py-0 bg-defaultwhite border-b [border-bottom-style:solid] border-[#0022871a]">
-      <div className="flex items-center gap-2.5 pl-0 pr-12 py-0 flex-1 overflow-x-auto hide-scrollbar">
-        <div className="flex h-20 bg-transparent p-0 gap-0 justify-start">
-          {tabItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => handleTabClick(item.id)}
-              className={`
-                inline-flex flex-col h-20 items-start justify-center gap-1 pt-2.5 pb-0 px-4 
-                flex-[0_0_auto] rounded-[100px] bg-transparent border-0 shadow-none
-                hover:bg-transparent
-                cursor-pointer transition-colors duration-200
-                ${
-                  activeTab === item.id
-                    ? "text-primary-blue  "
-                    : "text-neutral-1   "
-                }
+    return (
+      <section className="flex w-full items-center px-20 py-0 bg-defaultwhite border-b [border-bottom-style:solid] border-[#0022871a]">
+        <div className="flex items-center gap-2.5 pl-0 pr-12 py-0 flex-1 overflow-x-auto hide-scrollbar">
+          <div className="flex h-20 bg-transparent p-0 gap-0 justify-start">
+            {tabItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => handleTabClick(item.id)}
+                className={`
+              inline-flex flex-col h-20 items-start justify-center gap-1 pt-2.5 pb-0 px-4 
+              flex-[0_0_auto] rounded-[100px] bg-transparent border-0 shadow-none
+              hover:bg-transparent
+              cursor-pointer transition-colors duration-200
+              ${
+                activeTab === item.id
+                  ? "text-primary-blue  "
+                  : "text-neutral-1   "
+              }
               `}
-            >
-              <div className="inline-flex items-center justify-center gap-2.5 flex-1">
-                <div className="whitespace-nowrap w-fit">
-                  {item.label}
+              >
+                <div className="inline-flex items-center justify-center gap-2.5 flex-1">
+                  <div className="whitespace-nowrap w-fit">{item.label}</div>
                 </div>
-              </div>
-              <div className="flex flex-col items-center gap-2.5 self-stretch w-full flex-[0_0_auto] rounded-sm overflow-hidden">
-                {activeTab === item.id && (
-                  <div className="self-stretch w-full h-px bg-primary-blue" />
-                )}
-              </div>
-            </button>
-          ))}
+                <div className="flex flex-col items-center gap-2.5 self-stretch w-full flex-[0_0_auto] rounded-sm overflow-hidden">
+                  {activeTab === item.id && (
+                    <div className="self-stretch w-full h-px bg-primary-blue" />
+                  )}
+                </div>
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-  );
-};
+      </section>
+    );
+  };
+export const InsightsFilterSection=React.memo(InsightsFilterSectionComponent);
