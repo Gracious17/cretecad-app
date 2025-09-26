@@ -66,6 +66,9 @@ const HeroSection = ({
                     )}
                   </span>
                 </div>
+                {/* <span className="text-[#FDA908]">
+
+                </span> */}
                 {titleParts}
               </h1>
               <p className="text-xl text-(--text-secondary) max-w-lg">
