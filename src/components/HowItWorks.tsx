@@ -1,5 +1,6 @@
 
 import React from 'react'
+import SectionHeader from './sections/SectionHeader';
 
 const workflowSteps = [
   {
@@ -41,20 +42,24 @@ const workflowSteps = [
 ];
 const HowItWorks = () => {
   return (
+    <section className='py-20 items-center'>
 
-<div className="flex flex-wrap items-center  justify-center h-screen pt-20 gap-[100px_100px] p-2.5 w-full flex-[0_0_auto] pl-12 self-stretch">
+ <SectionHeader lineColor='#FFCC29' className='pl-8 pb-20'
+ text="How It Works"
+ />
+<div className="flex flex-wrap   justify-center gap-[100px_100px] p-2.5 w-full flex-[0_0_auto] pl-12 self-stretch">
           {workflowSteps.map((step, index) => (
             <div
-              key={index}
-              className="inline-flex flex-col items-start gap-3 relative flex-[0_0_auto]"
+            key={index}
+            className="inline-flex flex-col items-start gap-3 relative flex-[0_0_auto]"
             >
               <div className="absolute w-[200px] h-[200px] top-[-31px] left-[-50px]">
                 <div
                   className={`relative w-[200px] h-[200px] left-[-15px] ${step.bgColor} rounded-[100px] border-[0.5px] border-solid ${step.borderColor}`}
-                >
+                  >
                   <div
                     className={`opacity-40 ${step.textColor} absolute w-[100px] top-[58px] left-[49px] [font-family:'Familjen_Grotesk',Helvetica] font-normal text-[142.5px] text-center tracking-[0] leading-[121.1px] whitespace-nowrap`}
-                  >
+                    >
                     {step.number}
                   </div>
                 </div>
@@ -72,6 +77,7 @@ const HowItWorks = () => {
             </div>
           ))}
         </div>
+          </section>
 )
 }
 

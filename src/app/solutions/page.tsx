@@ -62,7 +62,8 @@ highlight="We're here to help."
 
         <WhyChooseCad />
 
-<div className="w-full  justify-center flex">
+<div className="w-full items-center gap-10 justify-center flex">
+  <p className="body-text text-[24px] font-[400] text-[#000D35B2]">Let&apos;s Build Africa&apos;s Future, Together</p>
         <Button>
 Get Started Today
         </Button>
