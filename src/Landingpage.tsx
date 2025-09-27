@@ -4,7 +4,6 @@ import ProductsSection from "./components/ProductsSection";
 import ValuesSection from "./components/ValuesSection";
 import PhilosophySection from "./components/PhilosophySection";
 
-
 const LandingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white overflow-hidden~">
@@ -15,7 +14,12 @@ const LandingPage: React.FC = () => {
           bgImage="/back2.svg"
           highlightedText="Transforming"
           titleImage="/africa.png"
-          titleParts=" Future Through Innovation"
+          titleParts={
+            <>
+              <span className="text-[#FDA908]">Future</span>
+              Through Innovation
+            </>
+          }
           subtitle="Redefining Africa's Business Industry, One Step at a Time"
         />
         <ProductsSection />

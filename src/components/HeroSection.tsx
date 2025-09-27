@@ -10,7 +10,7 @@ import { SearchIcon } from "lucide-react";
 type HeroSectionProps = {
   bgImage: string;
   title?: string;
-  titleParts?: string;
+  titleParts?: string | React.ReactNode;
   highlightedText?: string;
   titleImage?: string;
   titleImageClassName?: string;
